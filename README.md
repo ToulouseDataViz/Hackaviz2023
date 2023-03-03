@@ -61,19 +61,43 @@ Il s’agit du prix de la recharge aux bornes des véhicules électriques :
 
 Descriptif des colonnes des données de `borne_de_recharge`
 
-## Prix des Carburants
+## Pompes à essences
 
-Il s’agit du prix des carburants à la pompe et de leur évolution
+Les données de pompes à essences se situent dans les fichiers essence_2022.zip (contenant toutes les données liées à l'année 2022) et essence_2023-3-3.zip (contenant les données extraites le 3 mars 2023).
+Ces deux archives contiennent les fichiers suivants :
+- `essence/details_stations.csv` concernant les détails de chaque pompe.
+- `essence/fermetures_stations.csv` sur les détails de chaque fermeture.
+- `essence/prix_stations.csv` sur l'évolution des prix pratiqués pour chaque station.
+- `essence/ruptures_stations.csv`sur les ruptures pour chaque pompe.
 
-| Nom de colonne | Description                              | Exemple             |
-|----------------|------------------------------------------|---------------------|
-| carburant      | type de carburant                        | Gazole              |
-| id             | identifiant unique de la station service | 100012              |
-| latitude       | latitude de la station                   | 43.7                |
-| longitude      | longitude de la station                  | 7.41                |
-| cp             | code postal de la station                | 06320               |
-| ville          | nom de la ville de la station            | Cap-D’ail           |
-| maj            | date et heure de mise à jour du prix     | 2023-02-17 00:01:00 |
-| prix           | prix du carburant (€)                    | 1.93                |
+Le lien entre ces différents fichiers peut se faire grâce à l'identifiant de la pompe se trouvant dans la colonne `id_pompe` de chaque fichier.
 
-Descriptif des colonnes des données de `carburants`
+Voici une description détaillée du contenu de chacun de ces fichiers.
+
+## Contenu de `details_stations`
+Ce fichier contient les informations suivantes liées aux stations:
+
+|                 id_pompe |       latitude et longitude |                                              cp |                                                   autoroute |                             adresse |            ville |                                                     automate-24-24 |
+|--------------------------|-----------------------------|-------------------------------------------------|-------------------------------------------------------------|-------------------------------------|------------------|--------------------------------------------------------------------|
+| Identifiant de la pompe. | Coordonnés GPS de la pompe. | Code postal de l'endroit où se trouve la pompe. | Booléen égal à True lorsque la pompe est sur une autoroute. | Numéro et voie / chemin / avenue... | Nom de la ville. | Booléen égal à True lorsque la station possède un automate 24h/24. |
+
+## Contenu de `fermetures_stations`
+Fichier contenant les fermuetures pratiquées
+
+|                 id_pompe |                                                          type |                      debut |                                                fin |
+|--------------------------|---------------------------------------------------------------|----------------------------|----------------------------------------------------|
+| Identifiant de la pompe. | Type de fermeture. 'T' pour temporaire et 'D' pour définitive | Date de début de fermeture | Date de fin de fermeture si le type est temporaire |
+
+## Contenu de `prix_stations`
+Ce fichier contient l'évolution des prix pratiqués pour chaque station, les colonnes sont sous le format suivant :
+
+|                 id_pompe |              nom_carburant |                         date_maj |           prix |
+|--------------------------|----------------------------|----------------------------------|----------------|
+| Identifiant de la pompe. | Nom du carburant concerné. | Date de la dernière mise à jour. | Prix en euros. |
+
+## Contenu de `ruptures_stations`
+Ce fichier contient les ruptures de carburant reportées pour chaque station.
+
+|                 id_pompe |                             nom_carburant |                       debut |                       fin |
+|--------------------------|-------------------------------------------|-----------------------------|---------------------------|
+| Identifiant de la pompe. | Nom du carburant concerné par la rupture. | Date de début de la rupture | Date de fin de la rupture |
