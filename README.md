@@ -9,10 +9,11 @@ part du [Fichier consolidé des Bornes de Recharge pour Véhicules
 et du site gouvernemental [Le Prix des
 Carburants](https://www.prix-carburants.gouv.fr/) d’autre part.
 
-Le jeu de données est réparti sur deux fichiers. Il est possible de
-faire de belles visualisations à partir d’un seul de ces fichiers. Vous
-pouvez aussi les combiner, mais il n’est pas certain que la plus belle
-histoire ait besoin de toutes ces données.
+Chaque jeu de donnée contient plusieurs fichiers pour couvrir différents
+formats compatibles avec differents outils. Il est possible de faire de
+belles visualisations à partir d’un seul de ces fichiers. Vous pouvez
+aussi les combiner, mais il n’est pas certain que la plus belle histoire
+ait besoin de toutes ces données.
 
 Retrouvez les règles et les modes d’évaluation sur la page des [règles
 de l’Hackaviz](https://toulouse-dataviz.fr/hackaviz/reglement/) de
@@ -29,7 +30,8 @@ Bonne chance !
 
 ## Bornes de recharge pour véhicules électriques
 
-Il s’agit du prix de la recharge aux bornes des véhicules électriques :
+Le jeu de données \`borne_de_recharge\` releve les prix de la recharge
+aux bornes des véhicules électriques :
 
 | Nom de colonne         | Description                                                              | Exemple                                    |
 |------------------------|--------------------------------------------------------------------------|--------------------------------------------|
@@ -61,59 +63,41 @@ Il s’agit du prix de la recharge aux bornes des véhicules électriques :
 
 Descriptif des colonnes des données de `borne_de_recharge`
 
-## Pompes à essences
+## `essence`: Le prix des carburants
 
-Les données de pompes à essences se situent dans les fichiers [essence_2022.zip](data/essence_2022.zip) (contenant toutes les données liées à l'année 2022) et [essence_2023-3-8.zip](data/essence_2023-3-8.zip) (contenant les données extraites le 3 mars 2023).
-Ces deux archives contiennent les fichiers suivants :
-- `essence/details_stations.csv` concernant les détails de chaque pompe.
-- `essence/fermetures_stations.csv` sur les détails de chaque fermeture.
-- `essence/prix_stations.csv` sur l'évolution des prix pratiqués pour chaque station.
-- `essence/ruptures_stations.csv`sur les ruptures pour chaque pompe.
+Il s’agit du prix des carburants à la pompe et de leur évolution au
+cours du temps.
 
-Le lien entre ces différents fichiers peut se faire grâce à l'identifiant de la pompe se trouvant dans la colonne `id_pompe` de chaque fichier.
+| Nom de colonne | Description                              | Exemple             |
+|----------------|------------------------------------------|---------------------|
+| carburant      | type de carburant                        | Gazole              |
+| id             | identifiant unique de la station service | 100012              |
+| latitude       | latitude de la station                   | 43.7                |
+| longitude      | longitude de la station                  | 7.41                |
+| cp             | code postal de la station                | 06320               |
+| ville          | nom de la ville de la station            | Cap-D’ail           |
+| maj            | date et heure de mise à jour du prix     | 2023-02-17 00:01:00 |
+| prix           | prix du carburant (€)                    | 1.93                |
 
-Voici une description détaillée du contenu de chacun de ces fichiers.
+Descriptif des colonnes des données `essence`
 
-## Contenu de `details_stations`
-Ce fichier contient les informations suivantes liées aux stations :
+# Description des formats de fichiers
 
+Pour chaque jeu de données, nous avons tenté de vous faciliter la tâche
+en vous fournissant les fichiers sous plusieurs formats :
 
-|        Nom de colonne |                                                        Description |             Exemple |
-|-----------------------|--------------------------------------------------------------------|---------------------|
-|              id_pompe |                                           Identifiant de la pompe. |             1000001 |
-| latitude et longitude |                                        Coordonnés GPS de la pompe. |    46.253 et 6.1182 |
-|                    cp |                    Code postal de l'endroit où se trouve la pompe. |               31000 |
-|             autoroute |        Booléen égal à True lorsque la pompe est sur une autoroute. |               False |
-|               adresse |                                Numéro et voie / chemin / avenue... | 16 Avenue de Marboz |
-|                 ville |                                                    Nom de la ville |            Toulouse |
-|        automate-24-24 | Booléen égal à True lorsque la station possède un automate 24h/24. |                True |
+| Extension du fichier | Format                          | Outils de prédilection                                                       |
+|----------------------|---------------------------------|------------------------------------------------------------------------------|
+| csv.zip              | CSV, zippé, avec séparateur `,` | tous les outils dont les languages de programmation R, python, javascript, … |
+| xlsx                 | Office Open XML pour tableurs   | Libre Office, Open Office, Microsoft Excel, …                                |
 
-## Contenu de `fermetures_stations`
-Fichier contenant les fermetures pratiquées
+Les fichiers de données étant volumineux, une version aggrégé du jeu de
+donnée `essence` est aussi proposée :
 
-| Nom de colonne |                                                   Description |             Exemple |
-|----------------|---------------------------------------------------------------|---------------------|
-|       id_pompe |                                      Identifiant de la pompe. |             1000001 |
-|           type | Type de fermeture. 'T' pour temporaire et 'D' pour définitive |                   T |
-|          debut |                                    Date de début de fermeture | 2022-10-15T00:00:00 |
-|            fin |            Date de fin de fermeture si le type est temporaire | 2022-10-15T00:20:00 |
+# Télécharger les données
 
-## Contenu de `prix_stations`
-Ce fichier contient l'évolution des prix pratiqués pour chaque station, les colonnes sont sous le format suivant :
-
-| Nom de colonne |                      Description |             Exemple |
-|----------------|----------------------------------|---------------------|
-|       id_pompe |         Identifiant de la pompe. |             1000001 |
-|  nom_carburant |       Nom du carburant concerné. |              Gazole |
-|       date_maj | Date de la dernière mise à jour. | 2022-01-03 08:44:18 |
-|           prix |                   Prix en euros. |               1.572 |
-
-## Contenu de `ruptures_stations`
-Ce fichier contient les ruptures de carburant reportées pour chaque station.
-
-| Nom de colonne |                               Description |             Exemple |
-|----------------|-------------------------------------------|---------------------|
-|       id_pompe |                  Identifiant de la pompe. |             1000001 |
-|  nom_carburant | Nom du carburant concerné par la rupture. |                SP98 |
-|          debut |               Date de début de la rupture | 2022-10-21T07:51:17 |
-|            fin |                 Date de fin de la rupture | 2022-10-21T07:52:49 |
+| Ensemble.zip | [essence_2023.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/essence_2023.zip) | [borne_de_rechage.csv.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/borne_de_recharge.csv.zip) |
+|--------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+|              | [essence_2022.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/essence_2022.zip) |                                                                                                                       |
+|              | essence.xlsx                                                                                         | [borne_de_rechage.xlsx](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/borne_de_recharge.xlsx)       |
+|              | essence_resumé_hebdomadaire.xlsx                                                                     |                                                                                                                       |
