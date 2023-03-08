@@ -63,7 +63,7 @@ Descriptif des colonnes des données de `borne_de_recharge`
 
 ## Pompes à essences
 
-Les données de pompes à essences se situent dans les fichiers essence_2022.zip (contenant toutes les données liées à l'année 2022) et essence_2023-3-3.zip (contenant les données extraites le 3 mars 2023).
+Les données de pompes à essences se situent dans les fichiers essence_2022.zip (contenant toutes les données liées à l'année 2022) et essence_2023-3-8.zip (contenant les données extraites le 3 mars 2023).
 Ces deux archives contiennent les fichiers suivants :
 - `essence/details_stations.csv` concernant les détails de chaque pompe.
 - `essence/fermetures_stations.csv` sur les détails de chaque fermeture.
@@ -81,7 +81,7 @@ Ce fichier contient les informations suivantes liées aux stations :
 |        Nom de colonne |                                                        Description |             Exemple |
 |-----------------------|--------------------------------------------------------------------|---------------------|
 |              id_pompe |                                           Identifiant de la pompe. |             1000001 |
-| latitude et longitude |                                        Coordonnés GPS de la pompe. |                     |
+| latitude et longitude |                                        Coordonnés GPS de la pompe. |    46.253 et 6.1182 |
 |                    cp |                    Code postal de l'endroit où se trouve la pompe. |               31000 |
 |             autoroute |        Booléen égal à True lorsque la pompe est sur une autoroute. |               False |
 |               adresse |                                Numéro et voie / chemin / avenue... | 16 Avenue de Marboz |
