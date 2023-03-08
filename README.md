@@ -63,7 +63,7 @@ Descriptif des colonnes des données de `borne_de_recharge`
 
 ## Pompes à essences
 
-Les données de pompes à essences se situent dans les fichiers essence_2022.zip (contenant toutes les données liées à l'année 2022) et essence_2023-3-8.zip (contenant les données extraites le 3 mars 2023).
+Les données de pompes à essences se situent dans les fichiers [essence_2022.zip](data/essence_2022.zip) (contenant toutes les données liées à l'année 2022) et [essence_2023-3-8.zip](data/essence_2023-3-8.zip) (contenant les données extraites le 3 mars 2023).
 Ces deux archives contiennent les fichiers suivants :
 - `essence/details_stations.csv` concernant les détails de chaque pompe.
 - `essence/fermetures_stations.csv` sur les détails de chaque fermeture.
