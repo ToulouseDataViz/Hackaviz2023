@@ -75,29 +75,45 @@ Le lien entre ces différents fichiers peut se faire grâce à l'identifiant de 
 Voici une description détaillée du contenu de chacun de ces fichiers.
 
 ## Contenu de `details_stations`
-Ce fichier contient les informations suivantes liées aux stations:
+Ce fichier contient les informations suivantes liées aux stations :
 
-|                 id_pompe |       latitude et longitude |                                              cp |                                                   autoroute |                             adresse |            ville |                                                     automate-24-24 |
-|--------------------------|-----------------------------|-------------------------------------------------|-------------------------------------------------------------|-------------------------------------|------------------|--------------------------------------------------------------------|
-| Identifiant de la pompe. | Coordonnés GPS de la pompe. | Code postal de l'endroit où se trouve la pompe. | Booléen égal à True lorsque la pompe est sur une autoroute. | Numéro et voie / chemin / avenue... | Nom de la ville. | Booléen égal à True lorsque la station possède un automate 24h/24. |
+
+|        Nom de colonne |                                                        Description |             Exemple |
+|-----------------------|--------------------------------------------------------------------|---------------------|
+|              id_pompe |                                           Identifiant de la pompe. |             1000001 |
+| latitude et longitude |                                        Coordonnés GPS de la pompe. |                     |
+|                    cp |                    Code postal de l'endroit où se trouve la pompe. |               31000 |
+|             autoroute |        Booléen égal à True lorsque la pompe est sur une autoroute. |               False |
+|               adresse |                                Numéro et voie / chemin / avenue... | 16 Avenue de Marboz |
+|                 ville |                                                    Nom de la ville |            Toulouse |
+|        automate-24-24 | Booléen égal à True lorsque la station possède un automate 24h/24. |                True |
 
 ## Contenu de `fermetures_stations`
-Fichier contenant les fermuetures pratiquées
+Fichier contenant les fermetures pratiquées
 
-|                 id_pompe |                                                          type |                      debut |                                                fin |
-|--------------------------|---------------------------------------------------------------|----------------------------|----------------------------------------------------|
-| Identifiant de la pompe. | Type de fermeture. 'T' pour temporaire et 'D' pour définitive | Date de début de fermeture | Date de fin de fermeture si le type est temporaire |
+| Nom de colonne |                                                   Description |             Exemple |
+|----------------|---------------------------------------------------------------|---------------------|
+|       id_pompe |                                      Identifiant de la pompe. |             1000001 |
+|           type | Type de fermeture. 'T' pour temporaire et 'D' pour définitive |                   T |
+|          debut |                                    Date de début de fermeture | 2022-10-15T00:00:00 |
+|            fin |            Date de fin de fermeture si le type est temporaire | 2022-10-15T00:20:00 |
 
 ## Contenu de `prix_stations`
 Ce fichier contient l'évolution des prix pratiqués pour chaque station, les colonnes sont sous le format suivant :
 
-|                 id_pompe |              nom_carburant |                         date_maj |           prix |
-|--------------------------|----------------------------|----------------------------------|----------------|
-| Identifiant de la pompe. | Nom du carburant concerné. | Date de la dernière mise à jour. | Prix en euros. |
+| Nom de colonne |                      Description |             Exemple |
+|----------------|----------------------------------|---------------------|
+|       id_pompe |         Identifiant de la pompe. |             1000001 |
+|  nom_carburant |       Nom du carburant concerné. |              Gazole |
+|       date_maj | Date de la dernière mise à jour. | 2022-01-03 08:44:18 |
+|           prix |                   Prix en euros. |               1.572 |
 
 ## Contenu de `ruptures_stations`
 Ce fichier contient les ruptures de carburant reportées pour chaque station.
 
-|                 id_pompe |                             nom_carburant |                       debut |                       fin |
-|--------------------------|-------------------------------------------|-----------------------------|---------------------------|
-| Identifiant de la pompe. | Nom du carburant concerné par la rupture. | Date de début de la rupture | Date de fin de la rupture |
+| Nom de colonne |                               Description |             Exemple |
+|----------------|-------------------------------------------|---------------------|
+|       id_pompe |                  Identifiant de la pompe. |             1000001 |
+|  nom_carburant | Nom du carburant concerné par la rupture. |                SP98 |
+|          debut |               Date de début de la rupture | 2022-10-21T07:51:17 |
+|            fin |                 Date de fin de la rupture | 2022-10-21T07:52:49 |
