@@ -34,33 +34,33 @@ Bonne chance !
 Le jeu de données \`borne_de_recharge\` releve les prix de la recharge
 aux bornes des véhicules électriques :
 
-| Nom de colonne         | Description                                                              | Exemple                                    |
-|------------------------|--------------------------------------------------------------------------|--------------------------------------------|
-| nom_operateur          | operateur de la station                                                  | Freshmile SAS                              |
-| nom_enseigne           | Enseigne (nom commercial)                                                | Freshmile                                  |
-| nom_station            |                                                                          | Rang-Du-Fliers-Berck, Route de Berck -3659 |
-| implantation_station   |                                                                          | Voirie                                     |
-| adresse_station        |                                                                          | Route de Berck 62180 RANG DU FLIERS        |
-| code_insee_commune     |                                                                          | 56252                                      |
-| nbre_pdc               | nombre de points de comptages à cette station                            | 2                                          |
-| puissance_nominale     | puissance instantanée disponible (kW)                                    | 22                                         |
-| prise_type_2           | type de prise de charge disponible                                       | FALSE                                      |
-| prise_type_combo_ccs   | idem                                                                     | TRUE                                       |
-| prise_type_chademo     | idem                                                                     | TRUE                                       |
-| prise_type_autre       | idem                                                                     | FALSE                                      |
-| gratuit                | type de paiement                                                         | FALSE                                      |
-| paiement_acte          | idem                                                                     | TRUE                                       |
-| paiement_cb            | idem                                                                     | FALSE                                      |
-| paiement_autre         | idem                                                                     | TRUE                                       |
-| horaires               |                                                                          | 24/7                                       |
-| accessibilite_pmr      | accessibilité aux personnes à mobilité réduite                           | Accessibilité inconnue                     |
-| date_mise_en_service   | date au format ISO 8601 (année-mois-jour)                                | 2022-06-27                                 |
-| date_maj               | date de mise à jour                                                      | 2023-01-31                                 |
-| last_modified          | horodatage de la derniere modification de prix                           | 2023-02-26T08:53:12Z                       |
-| consolidated_longitude | longitude de la station                                                  | 1.608554                                   |
-| consolidated_latitude  | latitude de la station                                                   | 50.41349                                   |
-| prix_kWh               | prix de la charge au kWh en €                                            | 0.22                                       |
-| prix_session           | prix éventuel de démarrage de la session de charge. NA pour pas de prix. | NA                                         |
+| Nom de colonne         | Description                                                                                                | Exemple                                    |
+|------------------------|------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| nom_operateur          | operateur de la station                                                                                    | Freshmile SAS                              |
+| nom_enseigne           | Enseigne (nom commercial)                                                                                  | Freshmile                                  |
+| nom_station            |                                                                                                            | Rang-Du-Fliers-Berck, Route de Berck -3659 |
+| implantation_station   |                                                                                                            | Voirie                                     |
+| adresse_station        |                                                                                                            | Route de Berck 62180 RANG DU FLIERS        |
+| code_insee_commune     |                                                                                                            | 56252                                      |
+| nbre_pdc               | nombre de points de comptages à cette station                                                              | 2                                          |
+| puissance_nominale     | puissance instantanée disponible (kW)                                                                      | 22                                         |
+| prise_type_2           | type de prise de charge disponible                                                                         | FALSE                                      |
+| prise_type_combo_ccs   | idem                                                                                                       | TRUE                                       |
+| prise_type_chademo     | idem                                                                                                       | TRUE                                       |
+| prise_type_autre       | idem                                                                                                       | FALSE                                      |
+| gratuit                | type de paiement                                                                                           | FALSE                                      |
+| paiement_acte          | idem                                                                                                       | TRUE                                       |
+| paiement_cb            | idem                                                                                                       | FALSE                                      |
+| paiement_autre         | idem                                                                                                       | TRUE                                       |
+| horaires               |                                                                                                            | 24/7                                       |
+| accessibilite_pmr      | accessibilité aux personnes à mobilité réduite                                                             | Accessibilité inconnue                     |
+| date_mise_en_service   | date au format ISO 8601 (année-mois-jour)                                                                  | 2022-06-27                                 |
+| date_maj               | date de mise à jour                                                                                        | 2023-01-31                                 |
+| last_modified          | horodatage de la dernière modification de prix (format [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601)) | 2023-02-26T08:53:12Z                       |
+| consolidated_longitude | longitude de la station                                                                                    | 1.608554                                   |
+| consolidated_latitude  | latitude de la station                                                                                     | 50.41349                                   |
+| prix_kWh               | prix de la charge au kWh en €                                                                              | 0.22                                       |
+| prix_session           | prix éventuel de démarrage de la session de charge. NA pour pas de prix.                                   | NA                                         |
 
 Descriptif des colonnes des données de `borne_de_recharge`
 
@@ -95,11 +95,11 @@ Descriptif des colonnes des données `detail_stations.csv` dans
 
 ### Détail des prix
 
-| Nom de colonne | Description                                    | Exemple              |
-|----------------|------------------------------------------------|----------------------|
-| carburant      | type de carburant                              | Gazole               |
-| maj            | horodatage de la derniere modification de prix | 2023-02-17T00:01:00Z |
-| prix           | prix du carburant (€)                          | 1.93                 |
+| Nom de colonne | Description                                                      | Exemple              |
+|----------------|------------------------------------------------------------------|----------------------|
+| carburant      | type de carburant                                                | Gazole               |
+| maj            | horodatage de la dernière modification de prix (format ISO 8601) | 2023-02-17T00:01:00Z |
+| prix           | prix du carburant (€)                                            | 1.93                 |
 
 Descriptif des colonnes des données `prix_stations.csv` dans
 `essence.zip`
