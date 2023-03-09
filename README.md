@@ -80,6 +80,8 @@ Dans chaque archive, vous trouverez plusieurs fichiers:
 
 - les fermetures des stations
 
+Ces tables peuvent être reliées à l'aide d'une jointure sur l'identifiant unique de la station service (eg. 100012).
+
 ### Détail des stations
 
 | Nom de colonne | Description                              | Exemple   |
