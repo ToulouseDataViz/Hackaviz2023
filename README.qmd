@@ -7,7 +7,7 @@ lang: fr
 
 ![](images/image-408964965.png)
 
-Nous vous proposons cette année un jeu de données double, issue d'une part du [Fichier consolidé des Bornes de Recharge pour Véhicules Électriques](https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/), et du site gouvernemental [Le Prix des Carburants](https://www.prix-carburants.gouv.fr/) d'autre part.
+Nous vous proposons cette année un jeu de données double, issu d'une part du [Fichier consolidé des Bornes de Recharge pour Véhicules Électriques](https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/), et du site gouvernemental [Le Prix des Carburants](https://www.prix-carburants.gouv.fr/) d'autre part.
 
 Chaque jeu de donnée contient plusieurs fichiers pour couvrir différents formats compatibles avec differents outils. Il est possible de faire de belles visualisations à partir d'un seul de ces fichiers. Vous pouvez aussi les combiner, mais il n'est pas certain que la plus belle histoire ait besoin de toutes ces données.
 
