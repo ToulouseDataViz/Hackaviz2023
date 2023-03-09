@@ -97,19 +97,19 @@ Ces tables peuvent être reliées à l'aide d'une jointure sur l'identifiant uni
 
 ### Détail des stations
 
-+----------------+------------------------------------------+--------------+
-| Nom de colonne | Description                              | Exemple      |
-+================+==========================================+==============+
-| id             | identifiant unique de la station service | 100012       |
-+----------------+------------------------------------------+--------------+
-| latitude       | latitude de la station                   | 43.7323      |
-+----------------+------------------------------------------+--------------+
-| longitude      | longitude de la station                  | 7.4112       |
-+----------------+------------------------------------------+--------------+
-| cp             | code postal de la station                | 06320        |
-+----------------+------------------------------------------+--------------+
-| ville          | nom de la ville de la station            | Cap-D'ail    |
-+----------------+------------------------------------------+--------------+
++----------------+------------------------------------------+---------------+
+| Nom de colonne | Description                              | Exemple       |
++================+==========================================+===============+
+| id             | identifiant unique de la station service | 100012        |
++----------------+------------------------------------------+---------------+
+| latitude       | latitude de la station                   | 43.7323       |
++----------------+------------------------------------------+---------------+
+| longitude      | longitude de la station                  | 7.4112        |
++----------------+------------------------------------------+---------------+
+| cp             | code postal de la station                | 06320         |
++----------------+------------------------------------------+---------------+
+| ville          | nom de la ville de la station            | Cap-D'ail     |
++----------------+------------------------------------------+---------------+
 
 : Descriptif des colonnes des données `detail_stations.csv` dans `essence.zip`
 
@@ -148,39 +148,39 @@ Notez que dans ces deux versions agrégées, les mesures sont
 
 -   remplies avec les valeurs de l'intervalle precédent s'il n'y a eu aucun changement (valeur manquante)
 
-### Détail des ruptures d\'approvisionnement en car
+### Détail des ruptures d'approvisionnement en car
 
-+-----------------+------------------------------------------+----------------------+
-| Nom de colonne  | Description                              | Exemple              |
-+=================+==========================================+======================+
-| id_pompe        | identifiant unique de la station service | 100012               |
-+-----------------+------------------------------------------+----------------------+
-| nom_carburant   | type de carburant                        | SP95                 |
-+-----------------+------------------------------------------+----------------------+
-| debut           | début de la fermeture                    | 2023-02-17T00:01:00Z |
-+-----------------+------------------------------------------+----------------------+
-| fin             | fin de la fermeture                      | 2023-02-19T13:07:00Z |
-+-----------------+------------------------------------------+----------------------+
++----------------+------------------------------------------+----------------------+
+| Nom de colonne | Description                              | Exemple              |
++================+==========================================+======================+
+| id_pompe       | identifiant unique de la station service | 100012               |
++----------------+------------------------------------------+----------------------+
+| nom_carburant  | type de carburant                        | SP95                 |
++----------------+------------------------------------------+----------------------+
+| debut          | début de la fermeture                    | 2023-02-17T00:01:00Z |
++----------------+------------------------------------------+----------------------+
+| fin            | fin de la fermeture                      | 2023-02-19T13:07:00Z |
++----------------+------------------------------------------+----------------------+
 
 : Descriptif des colonnes des données `fermetures_stations.csv` dans `essence.zip`
 
 ### Détail des fermetures de station-service
 
-+-----------------+------------------------------------------+----------------------+
-| Nom de colonne  | Description                              | Exemple              |
-+=================+==========================================+======================+
-| id_pompe        | identifiant unique de la station service | 100012               |
-+-----------------+------------------------------------------+----------------------+
-| type            | type de la fermeture :                   | T                    |
-|                 |                                          |                      |
-|                 | -   T: Temporaires                       |                      |
-|                 |                                          |                      |
-|                 | -   D: Définitives                       |                      |
-+-----------------+------------------------------------------+----------------------+
-| debut           | début de la fermeture                    | 2023-02-17T00:01:00Z |
-+-----------------+------------------------------------------+----------------------+
-| fin             | fin de la fermeture                      | 2023-02-19T13:07:00Z |
-+-----------------+------------------------------------------+----------------------+
++----------------+------------------------------------------+----------------------+
+| Nom de colonne | Description                              | Exemple              |
++================+==========================================+======================+
+| id_pompe       | identifiant unique de la station service | 100012               |
++----------------+------------------------------------------+----------------------+
+| type           | type de la fermeture :                   | T                    |
+|                |                                          |                      |
+|                | -   T: Temporaires                       |                      |
+|                |                                          |                      |
+|                | -   D: Définitives                       |                      |
++----------------+------------------------------------------+----------------------+
+| debut          | début de la fermeture                    | 2023-02-17T00:01:00Z |
++----------------+------------------------------------------+----------------------+
+| fin            | fin de la fermeture                      | 2023-02-19T13:07:00Z |
++----------------+------------------------------------------+----------------------+
 
 : Descriptif des colonnes des données `fermetures_stations.csv` dans `essence.zip`
 
@@ -220,6 +220,12 @@ L'ensemble des fichiers est accessible ici : [Page de téléchargement](https://
 -   [essence_hebdomadaire.xlsx - prix agrégés à la semaine pour les années 2022 et 2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence_hebdomadaire.xlsx)
 
 -   [essence_mensuel.xlsx - prix agrégés au mois pour les années 2022 et 2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence_mensuel.xlsx)
+
+-   [essence_hebdomadaire.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/essence_hebdomadaire.csv.zip) et [essence_mensuel.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/essence_mensuel.csv.zip)
+
+## Les départements français
+
+[departements_france.csv](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/departements-france.csv)
 
 # Une erreur dans les données ?
 

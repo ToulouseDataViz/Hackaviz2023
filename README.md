@@ -3,7 +3,7 @@ Hackaviz 2023 : Le prix de l’énergie pour les véhicules particuliers
 
 ![](images/image-408964965.png)
 
-Nous vous proposons cette année un jeu de données double, issu d’une
+Nous vous proposons cette année un jeu de données double, issue d’une
 part du [Fichier consolidé des Bornes de Recharge pour Véhicules
 Électriques](https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/),
 et du site gouvernemental [Le Prix des
@@ -80,7 +80,8 @@ Dans chaque archive, vous trouverez plusieurs fichiers:
 
 - les fermetures des stations
 
-Ces tables peuvent être reliées à l'aide d'une jointure sur l'identifiant unique de la station service (eg. 100012).
+Ces tables peuvent être reliées à l’aide d’une jointure sur
+l’identifiant unique de la station service (eg. 100012).
 
 ### Détail des stations
 
@@ -99,7 +100,7 @@ Descriptif des colonnes des données `detail_stations.csv` dans
 
 | Nom de colonne | Description                                                      | Exemple              |
 |----------------|------------------------------------------------------------------|----------------------|
-| id_pompe       | identifiant unique de la station service | 100012               |
+| id             | identifiant unique de la station service                         | 100012               |
 | carburant      | type de carburant                                                | Gazole               |
 | maj            | horodatage de la dernière modification de prix (format ISO 8601) | 2023-02-17T00:01:00Z |
 | prix           | prix du carburant (€)                                            | 1.93                 |
@@ -134,7 +135,7 @@ Notez que dans ces deux versions agrégées, les mesures sont
 - remplies avec les valeurs de l’intervalle precédent s’il n’y a eu
   aucun changement (valeur manquante)
 
-### Détail des ruptures d'approvisionnement en car
+### Détail des ruptures d’approvisionnement en car
 
 | Nom de colonne | Description                              | Exemple              |
 |----------------|------------------------------------------|----------------------|
@@ -153,8 +154,8 @@ Descriptif des colonnes des données `fermetures_stations.csv` dans
 <code>fermetures_stations.csv</code> dans
 <code>essence.zip</code></caption>
 <colgroup>
-<col style="width: 21%" />
-<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 51%" />
 <col style="width: 27%" />
 </colgroup>
 <thead>
@@ -239,6 +240,14 @@ téléchargement](https://github.com/ToulouseDataViz/Hackaviz2023/releases/tag/v
 
 - [essence_mensuel.xlsx - prix agrégés au mois pour les années 2022 et
   2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence_mensuel.xlsx)
+
+- [essence_hebdomadaire.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/essence_hebdomadaire.csv.zip)
+  et
+  [essence_mensuel.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/essence_mensuel.csv.zip)
+
+## Les départements français
+
+[departements_france.csv](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/departements-france.csv)
 
 # Une erreur dans les données ?
 
