@@ -3,7 +3,7 @@ Hackaviz 2023 : Le prix de l’énergie pour les véhicules particuliers
 
 ![](images/image-408964965.png)
 
-Nous vous proposons cette année un jeu de données double, issue d’une
+Nous vous proposons cette année un jeu de données double, issu d’une
 part du [Fichier consolidé des Bornes de Recharge pour Véhicules
 Électriques](https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/),
 et du site gouvernemental [Le Prix des
@@ -97,6 +97,7 @@ Descriptif des colonnes des données `detail_stations.csv` dans
 
 | Nom de colonne | Description                                                      | Exemple              |
 |----------------|------------------------------------------------------------------|----------------------|
+| id_pompe       | identifiant unique de la station service | 100012               |
 | carburant      | type de carburant                                                | Gazole               |
 | maj            | horodatage de la dernière modification de prix (format ISO 8601) | 2023-02-17T00:01:00Z |
 | prix           | prix du carburant (€)                                            | 1.93                 |
