@@ -72,13 +72,12 @@ cours du temps.
 Dans chaque archive, vous trouverez plusieurs fichiers:
 
 - le détail des stations dans `details_stations`
-
 - `prix_stations.csv` pour l’évolution des prix.
-
 - les ruptures d’approvisionnement des stations services :
   `ruptures_stations.csv`
-
 - les fermetures des stations
+
+Ces tables peuvent être reliées à l'aide d'une jointure sur l'identifiant unique de la station service (eg. 100012).
 
 ### Détail des stations
 
@@ -97,6 +96,7 @@ Descriptif des colonnes des données `detail_stations.csv` dans
 
 | Nom de colonne | Description                                                                | Exemple             |
 |----------------|----------------------------------------------------------------------------|---------------------|
+| id             | identifiant unique de la station service | 100012    |
 | carburant      | type de carburant                                                          | Gazole              |
 | maj            | horodatage de la derniere modification de prix (format ISO 8601 sans le T) | 2023-02-17 00:01:00 |
 | prix           | prix du carburant (€)                                                      | 1.93                |
