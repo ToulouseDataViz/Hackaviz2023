@@ -3,11 +3,11 @@ Hackaviz 2023 : Le prix de l’énergie pour les véhicules particuliers
 
 ![](images/image-408964965.png)
 
-Nous vous proposons cette année un jeu de données double, issue d’une
-part du [Fichier consolidé des Bornes de Recharge pour Véhicules
-Électriques](https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/),
-et du site gouvernemental [Le Prix des
-Carburants](https://www.prix-carburants.gouv.fr/) d’autre part.
+Nous vous proposons cette année un jeu de données double, issu d’une
+part du [fichier consolidé des bornes de recharge pour véhicules
+électriques](https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/),
+et du site gouvernemental du [prix des
+carburants](https://www.prix-carburants.gouv.fr/) d’autre part.
 
 Chaque jeu de donnée contient plusieurs fichiers pour couvrir différents
 formats compatibles avec differents outils. Il est possible de faire de
@@ -20,7 +20,7 @@ de l’Hackaviz](https://toulouse-dataviz.fr/hackaviz/reglement/) de
 l’association [Toulouse DataViz (TDV)](http://toulouse-dataviz.fr).
 
 N’hésitez pas à nous contacter sur le
-[discord](https://discord.com/invite/RbTR4jKRp9) du Toulouse DataViz
+[discord](https://discord.gg/xRUkJRx5Q4) de Toulouse DataViz
 pour discuter entre participants, si vous avez besoin d’aide à propos
 des données ou pour rapporter des erreurs dans le jeu de données.
 
@@ -30,7 +30,7 @@ Bonne chance !
 
 ## Bornes de recharge pour véhicules électriques
 
-Le jeu de données \`borne_de_recharge\` releve les prix de la recharge
+Le jeu de données \`borne_de_recharge\` relève les prix de la recharge
 aux bornes des véhicules électriques :
 
 | Nom de colonne         | Description                                                              | Exemple                                    |
@@ -43,7 +43,8 @@ aux bornes des véhicules électriques :
 | code_insee_commune     |                                                                          | 56252                                      |
 | nbre_pdc               | nombre de points de comptages à cette station                            | 2                                          |
 | puissance_nominale     | puissance instantanée disponible (kW)                                    | 22                                         |
-| prise_type_2           | type de prise de charge disponible                                       | FALSE                                      |
+| prise_type_ef           | type de prise de charge disponible                                       | FALSE                                      |
+| prise_type_2           | idem                                       | FALSE                                      |
 | prise_type_combo_ccs   | idem                                                                     | TRUE                                       |
 | prise_type_chademo     | idem                                                                     | TRUE                                       |
 | prise_type_autre       | idem                                                                     | FALSE                                      |
@@ -72,8 +73,8 @@ cours du temps.
 |----------------|------------------------------------------|---------------------|
 | carburant      | type de carburant                        | Gazole              |
 | id             | identifiant unique de la station service | 100012              |
-| latitude       | latitude de la station                   | 43.7                |
-| longitude      | longitude de la station                  | 7.41                |
+| latitude       | latitude de la station                   | 43.7323                |
+| longitude      | longitude de la station                  | 7.4112               |
 | cp             | code postal de la station                | 06320               |
 | ville          | nom de la ville de la station            | Cap-D’ail           |
 | maj            | date et heure de mise à jour du prix     | 2023-02-17 00:01:00 |
@@ -91,13 +92,13 @@ en vous fournissant les fichiers sous plusieurs formats :
 | csv.zip              | CSV, zippé, avec séparateur `,` | tous les outils dont les languages de programmation R, python, javascript, … |
 | xlsx                 | Office Open XML pour tableurs   | Libre Office, Open Office, Microsoft Excel, …                                |
 
-Les fichiers de données étant volumineux, une version aggrégé du jeu de
-donnée `essence` est aussi proposée :
+Les fichiers de données étant volumineux, une version aggrégée du jeu de
+donnée `essence` est aussi proposée par semaine et par mois.
 
 # Télécharger les données
 
-| Ensemble.zip | [essence_2023.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/essence_2023.zip) | [borne_de_rechage.csv.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/borne_de_recharge.csv.zip) |
+| Ensemble.zip | [essence_2023.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/essence_2023.zip) | [borne_de_recharge.csv.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/borne_de_recharge.csv.zip) |
 |--------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 |              | [essence_2022.zip](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/essence_2022.zip) |                                                                                                                       |
-|              | essence.xlsx                                                                                         | [borne_de_rechage.xlsx](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/borne_de_recharge.xlsx)       |
+|              | essence.xlsx                                                                                         | [borne_de_recharge.xlsx](https://github.com/ToulouseDataViz/Hackaviz-2023/blob/main/data/borne_de_recharge.xlsx)       |
 |              | essence_resumé_hebdomadaire.xlsx                                                                     |                                                                                                                       |
