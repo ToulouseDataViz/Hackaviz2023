@@ -121,10 +121,76 @@ changements de prix dans la même journée. Vous pouvez en déduire qu’au
 1.76€/l.
 
 Ces fichiers étant volumineux (5 millions de lignes), une version
-aggrégée des prix est aussi proposée par semaine ( plus d’un million de
-lignes) et par mois (500 000 lignes). Notez que dans ces deux versions
-aggrégées, les mesures sont répétées à des intervalles réguliers (par
-semaine ou par mois).
+agrégée des prix est aussi proposée par semaine ( plus d’un million de
+lignes) et par mois (500 000 lignes).
+
+Notez que dans ces deux versions agrégées, les mesures sont
+
+- répétées à des intervalles réguliers (par semaine ou par mois),
+
+- remplies avec les valeurs de l’intervalle precédent s’il n’y a eu
+  aucun changement (valeur manquante)
+
+### Détail des ruptures d'approvisionnement en car
+
+| Nom de colonne | Description                              | Exemple              |
+|----------------|------------------------------------------|----------------------|
+| id_pompe       | identifiant unique de la station service | 100012               |
+| nom_carburant  | type de carburant                        | SP95                 |
+| debut          | début de la fermeture                    | 2023-02-17T00:01:00Z |
+| fin            | fin de la fermeture                      | 2023-02-19T13:07:00Z |
+
+Descriptif des colonnes des données `fermetures_stations.csv` dans
+`essence.zip`
+
+### Détail des fermetures de station-service
+
+<table style="width:99%;">
+<caption>Descriptif des colonnes des données
+<code>fermetures_stations.csv</code> dans
+<code>essence.zip</code></caption>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 50%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nom de colonne</th>
+<th>Description</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id_pompe</td>
+<td>identifiant unique de la station service</td>
+<td>100012</td>
+</tr>
+<tr class="even">
+<td>type</td>
+<td><p>type de la fermeture :</p>
+<ul>
+<li><p>T: Temporaires</p></li>
+<li><p>D: Définitives</p></li>
+</ul></td>
+<td>T</td>
+</tr>
+<tr class="odd">
+<td>debut</td>
+<td>début de la fermeture</td>
+<td>2023-02-17T00:01:00Z</td>
+</tr>
+<tr class="even">
+<td>fin</td>
+<td>fin de la fermeture</td>
+<td>2023-02-19T13:07:00Z</td>
+</tr>
+</tbody>
+</table>
+
+Descriptif des colonnes des données `fermetures_stations.csv` dans
+`essence.zip`
 
 # Description des formats de fichiers
 
@@ -136,7 +202,7 @@ en vous fournissant les fichiers sous plusieurs formats :
 | csv.zip              | CSV, zippé, avec séparateur `,` | tous les outils dont les languages de programmation R, python, javascript, … |
 | xlsx                 | Office Open XML pour tableurs   | Libre Office, Open Office, Microsoft Excel, …                                |
 
-Les fichiers de données étant volumineux, deux versions aggrégées du jeu
+Les fichiers de données étant volumineux, deux versions agrégées du jeu
 de donnée `essence` sont aussi proposée :
 
 # Télécharger les données
@@ -178,8 +244,8 @@ est si vite arrivée…
 
 Pour une faute d’orthographe, une explication peu claire sur les
 données, ou une grave erreur de format ou de contenu dans données,
-n’hésitez pas à nous faire par de vos doutes ou simples questions sur le
-[forum de discussion discord
+n’hésitez pas à nous faire part de vos doutes ou simples questions sur
+le [forum de discussion discord
 dédié](https://discord.gg/Dh8yw3Cc "Le salon discord hackaviz 2023"), ou
-directement publier [un problème dans le dépot de code
+bien à directement lever [un problème dans le dépot de code
 github](https://github.com/ToulouseDataViz/Hackaviz2023/issues "nouveau bug github").
