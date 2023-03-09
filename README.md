@@ -20,9 +20,10 @@ de l’Hackaviz](https://toulouse-dataviz.fr/hackaviz/reglement/) de
 l’association [Toulouse DataViz (TDV)](http://toulouse-dataviz.fr).
 
 N’hésitez pas à nous contacter sur le
-[discord](https://discord.com/invite/RbTR4jKRp9) du Toulouse DataViz
-pour discuter entre participants, si vous avez besoin d’aide à propos
-des données ou pour rapporter des erreurs dans le jeu de données.
+[discord](https://discord.gg/Dh8yw3Cc "Le Salon du Hackaviz 2023") du
+Toulouse DataViz pour discuter entre participants, si vous avez besoin
+d’aide à propos des données ou pour rapporter des erreurs dans le jeu de
+données.
 
 Bonne chance !
 
@@ -68,7 +69,7 @@ Descriptif des colonnes des données de `borne_de_recharge`
 Il s’agit du prix des carburants à la pompe et de leur évolution au
 cours du temps.
 
-Dans chaque archives vous trouverez plusieurs fichiers:
+Dans chaque archive, vous trouverez plusieurs fichiers:
 
 - le détail des stations dans `details_stations`
 
@@ -170,3 +171,16 @@ téléchargement](https://github.com/ToulouseDataViz/Hackaviz-2023/releases/tag/
 - [essence_mensuel.xlsx - prix agrégés au mois pour les années 2022 et
   2023](https://github.com/ToulouseDataViz/Hackaviz-2023/releases/download/v1/essence_mensuel.xlsx)
   0 comments on
+
+# Une erreur dans les données ?
+
+Malgré toute l’attention portée à la préparation des données, une erreur
+est si vite arrivée…
+
+Pour une faute d’orthographe, une explication peu claire sur les
+données, ou une grave erreur de format ou de contenu dans données,
+n’hésitez pas à nous faire par de vos doutes ou simples questions sur le
+[forum de discussion discord
+dédié](https://discord.gg/Dh8yw3Cc "Le salon discord hackaviz 2023"), ou
+directement publier [un problème dans le dépot de code
+github](https://github.com/ToulouseDataViz/Hackaviz-2023/issues "nouveau bug github").
