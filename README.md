@@ -214,40 +214,40 @@ de donnée `essence` sont aussi proposée :
 ## Ensemble des données
 
 L’ensemble des fichiers est accessible ici : [Page de
-téléchargement](https://github.com/ToulouseDataViz/Hackaviz2023/releases/tag/v2)
+téléchargement](https://github.com/ToulouseDataViz/Hackaviz2023/releases/tag/v3)
 
 ## Prix aux bornes de recharge pour véhicules électriques
 
-- [borne_de_recharge.xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/borne_de_recharge.xlsx)  
-- [borne_de_recharge.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/borne_de_recharge.csv)
+- [borne_de_recharge.xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/borne_de_recharge.xlsx)  
+- [borne_de_recharge.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/borne_de_recharge.csv)
 
 ## Le prix des carburants pour les véhicules à combustion
 
 - [essence_2022.zip - prix à la demi-journée et détail des stations pour
   l’année
-  2022](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence_2022.zip)
+  2022](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_2022.zip)
 
 - [essence_2023-3-8.zip - prix à la demi-journée et détail des stations
   pour l’année 2023 (jusqu’au 8
-  mars)](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence_2023-3-8.zip)
+  mars)](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_2023-3-8.zip)
 
 - [essence.xlsx - l’ensemble au format
-  xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence.xlsx)
+  xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence.xlsx)
 
 - [essence_hebdomadaire.xlsx - prix agrégés à la semaine pour les années
   2022 et
-  2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence_hebdomadaire.xlsx)
+  2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_hebdomadaire.xlsx)
 
 - [essence_mensuel.xlsx - prix agrégés au mois pour les années 2022 et
-  2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v2/essence_mensuel.xlsx)
+  2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_mensuel.xlsx)
 
-- [essence_hebdomadaire.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/essence_hebdomadaire.csv.zip)
+- [essence_hebdomadaire.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_hebdomadaire.csv.zip)
   et
-  [essence_mensuel.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/essence_mensuel.csv.zip)
+  [essence_mensuel.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_mensuel.csv.zip)
 
 ## Les départements français
 
-[departements_france.csv](https://github.com/ToulouseDataViz/Hackaviz2023/blob/main/data/departements-france.csv)
+[departements_france.csv](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/departements-france.csv)
 
 # Une erreur dans les données ?
 
