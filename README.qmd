@@ -5,7 +5,7 @@ editor: source
 lang: fr
 ---
 
-![](images/image-408964965.png)
+![](images/image-408964965.png){fig-alt="Une épave de voiture rouge au milieu d'un désert sur fond d'un champ de pylônes électriques sous un ciel d'orage"}
 
 Nous vous proposons cette année un jeu de données double, issu d'une part du [Fichier consolidé des Bornes de Recharge pour Véhicules Électriques](https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/), et du site gouvernemental [Le Prix des Carburants](https://www.prix-carburants.gouv.fr/) d'autre part.
 
@@ -21,12 +21,12 @@ Bonne chance !
 
 ## Prix aux bornes de recharge pour véhicules électriques
 
-Le jeu de données \`borne_de_recharge\` releve les prix de la recharge aux bornes des véhicules électriques :
+Le jeu de données \`borne_de_recharge\` relève les prix de la recharge aux bornes des véhicules électriques :
 
 +------------------------+------------------------------------------------------------------------------------------------------------+--------------------------------------------+
 | Nom de colonne         | Description                                                                                                | Exemple                                    |
 +========================+============================================================================================================+============================================+
-| nom_operateur          | operateur de la station                                                                                    | Freshmile SAS                              |
+| nom_operateur          | opérateur de la station                                                                                    | Freshmile SAS                              |
 +------------------------+------------------------------------------------------------------------------------------------------------+--------------------------------------------+
 | nom_enseigne           | Enseigne (nom commercial)                                                                                  | Freshmile                                  |
 +------------------------+------------------------------------------------------------------------------------------------------------+--------------------------------------------+
@@ -93,25 +93,27 @@ Dans chaque archive, vous trouverez plusieurs fichiers:
 
 -   les fermetures des stations
 
-Ces tables peuvent être reliées à l'aide d'une jointure sur l'identifiant unique de la station service (eg. 100012).
+Ces tables peuvent être facilement reliées à l'aide d'une jointure sur l'identifiant unique de la station service (eg. 100012). Pour être plus strict, quelques (109) station-services changent d'`id_station` au cours du temps, et une jointure simultanée sur `latitude` et `longitude` peut être nécessaire.
 
 ### Détail des stations
 
-+----------------+------------------------------------------+---------------+
-| Nom de colonne | Description                              | Exemple       |
-+================+==========================================+===============+
-| id             | identifiant unique de la station service | 100012        |
-+----------------+------------------------------------------+---------------+
-| latitude       | latitude de la station                   | 43.7323       |
-+----------------+------------------------------------------+---------------+
-| longitude      | longitude de la station                  | 7.4112        |
-+----------------+------------------------------------------+---------------+
-| cp             | code postal de la station                | 06320         |
-+----------------+------------------------------------------+---------------+
-| ville          | nom de la ville de la station            | Cap-D'ail     |
-+----------------+------------------------------------------+---------------+
++----------------+----------------------------------------------+--------------+
+| Nom de colonne | Description                                  | Exemple      |
++================+==============================================+==============+
+| id_station     | identifiant unique[^1] de la station service | 100012       |
++----------------+----------------------------------------------+--------------+
+| latitude       | latitude de la station                       | 43.7323      |
++----------------+----------------------------------------------+--------------+
+| longitude      | longitude de la station                      | 7.4112       |
++----------------+----------------------------------------------+--------------+
+| cp             | code postal de la station                    | 06320        |
++----------------+----------------------------------------------+--------------+
+| ville          | nom de la ville de la station                | Cap-D'ail    |
++----------------+----------------------------------------------+--------------+
 
 : Descriptif des colonnes des données `detail_stations.csv` dans `essence.zip`
+
+[^1]: hors modification de l'adresse ou passage en automate.
 
 ### Détail des prix
 
@@ -146,7 +148,7 @@ Notez que dans ces deux versions agrégées, les mesures sont
 
 -   répétées à des intervalles réguliers (par semaine ou par mois),
 
--   remplies avec les valeurs de l'intervalle precédent s'il n'y a eu aucun changement (valeur manquante)
+-   remplies avec les valeurs de l'intervalle précédent s'il n'y a eu aucun changement (valeur manquante)
 
 ### Détail des ruptures d'approvisionnement en car
 
@@ -202,30 +204,30 @@ Les fichiers de données étant volumineux, deux versions agrégées du jeu de d
 
 ## Ensemble des données
 
-L'ensemble des fichiers est accessible ici : [Page de téléchargement](https://github.com/ToulouseDataViz/Hackaviz2023/releases/tag/v3)
+L'ensemble des fichiers est accessible ici : [Page de téléchargement](https://github.com/ToulouseDataViz/Hackaviz2023/releases/tag/v4)
 
 ## Prix aux bornes de recharge pour véhicules électriques
 
--   [borne_de_recharge.xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/borne_de_recharge.xlsx)\
--   [borne_de_recharge.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/borne_de_recharge.csv)
+-   [borne_de_recharge.xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/borne_de_recharge.xlsx)\
+-   [borne_de_recharge.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/borne_de_recharge.csv)
 
 ## Le prix des carburants pour les véhicules à combustion
 
--   [essence_2022.zip - prix à la demi-journée et détail des stations pour l'année 2022](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_2022.zip)
+-   [essence_2022.zip - prix à la demi-journée et détail des stations pour l'année 2022](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/essence_2022.zip)
 
--   [essence_2023-3-8.zip - prix à la demi-journée et détail des stations pour l'année 2023 (jusqu'au 8 mars)](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_2023-3-8.zip)
+-   [essence_2023-3-8.zip - prix à la demi-journée et détail des stations pour l'année 2023 (jusqu'au 8 mars)](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/essence_2023-3-8.zip)
 
--   [essence.xlsx - l'ensemble au format xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence.xlsx)
+-   [essence.xlsx - l'ensemble au format xlsx](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/essence.xlsx)
 
--   [essence_hebdomadaire.xlsx - prix agrégés à la semaine pour les années 2022 et 2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_hebdomadaire.xlsx)
+-   [essence_hebdomadaire.xlsx - prix agrégés à la semaine pour les années 2022 et 2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/essence_hebdomadaire.xlsx)
 
--   [essence_mensuel.xlsx - prix agrégés au mois pour les années 2022 et 2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_mensuel.xlsx)
+-   [essence_mensuel.xlsx - prix agrégés au mois pour les années 2022 et 2023](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/essence_mensuel.xlsx)
 
--   [essence_hebdomadaire.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_hebdomadaire.csv.zip) et [essence_mensuel.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/essence_mensuel.csv.zip)
+-   [essence_hebdomadaire.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/essence_hebdomadaire.csv.zip) et [essence_mensuel.csv.zip](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/essence_mensuel.csv.zip)
 
 ## Les départements français
 
-[departements_france.csv](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v3/departements-france.csv)
+[departements_france.csv](https://github.com/ToulouseDataViz/Hackaviz2023/releases/download/v4/departements-france.csv)
 
 # Une erreur dans les données ?
 
