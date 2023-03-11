@@ -126,7 +126,7 @@ Ces tables peuvent être facilement reliées à l'aide d'une jointure sur l'iden
 +----------------+------------------------------------------------------------------+----------------------+
 | maj            | horodatage de la dernière modification de prix (format ISO 8601) | 2023-02-17T00:01:00Z |
 +----------------+------------------------------------------------------------------+----------------------+
-| prix           | prix du carburant (€)                                            | 1.93                 |
+| prix           | prix du carburant ( € / l )                                      | 1.93                 |
 +----------------+------------------------------------------------------------------+----------------------+
 
 : Descriptif des colonnes des données `prix_stations.csv` dans `essence.zip`
@@ -150,7 +150,7 @@ Notez que dans ces deux versions agrégées, les mesures sont
 
 -   remplies avec les valeurs de l'intervalle précédent s'il n'y a eu aucun changement (valeur manquante)
 
-### Détail des ruptures d'approvisionnement en car
+### Détail des ruptures d'approvisionnement en carburant
 
 +----------------+------------------------------------------+----------------------+
 | Nom de colonne | Description                              | Exemple              |
@@ -159,12 +159,12 @@ Notez que dans ces deux versions agrégées, les mesures sont
 +----------------+------------------------------------------+----------------------+
 | nom_carburant  | type de carburant                        | SP95                 |
 +----------------+------------------------------------------+----------------------+
-| debut          | début de la fermeture                    | 2023-02-17T00:01:00Z |
+| debut          | début de la rupture de stock             | 2023-02-17T00:01:00Z |
 +----------------+------------------------------------------+----------------------+
-| fin            | fin de la fermeture                      | 2023-02-19T13:07:00Z |
+| fin            | fin de la rupture de stock               | 2023-02-19T13:07:00Z |
 +----------------+------------------------------------------+----------------------+
 
-: Descriptif des colonnes des données `fermetures_stations.csv` dans `essence.zip`
+: Descriptif des colonnes des données `ruptures_stations.csv` dans `essence.zip`
 
 ### Détail des fermetures de station-service
 
